@@ -15,7 +15,11 @@ DEFAULT_NEW_DIR = "images/new"
 DEFAULT_TILE_IMAGE = "images/tile.jpg"
 
 # Parse the command line arguments
-parser = argparse.ArgumentParser(description=__doc__, epilog="For more information see: https://github.com/jwolff52/square-images")
+parser = argparse.ArgumentParser(
+  description=__doc__,
+  epilog="For more information see: https://github.com/jwolff52/square-images",
+  formatter_class=argparse.ArgumentDefaultsHelpFormatter
+)
 parser.add_argument("-v", "--verbose", help="Increase output verbosity", action="store_true")
 parser.add_argument("-o", "--old", help="The directory containing the old images", default=DEFAULT_OLD_DIR)
 parser.add_argument("-n", "--new", help="The directory to save the new images", default=DEFAULT_NEW_DIR)
